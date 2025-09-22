@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "StartTabs",
+  "version": "1.0",
+  "description": "Save your go-to websites in one place and open them all together with a single click — perfect for work, school, or daily browsing.",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",          // required for chrome.scripting.executeScript
+    "activeTab"           // useful when injecting into the active page
+  ],
+
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": { 
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html"
+}
